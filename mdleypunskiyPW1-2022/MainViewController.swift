@@ -56,12 +56,19 @@ final class MainViewController: UIViewController {
     @objc
     private func didButtonClicked() {
         print("Click me harder")
+        button.isEnabled = false
+        button.setTitleColor(.lightGray, for: .normal)
         UIView.animate(withDuration: 2, animations: {
             for view in self.viewsList {
                 view.backgroundColor = UIColor(hex: randomHexColorString())
                 view.layer.cornerRadius = .random(in: 0...50)
             }
-        })
+        }, completion: { _ in self.clickEnded()})
+    }
+    
+    private func clickEnded() {
+        self.button.isEnabled = true
+        self.button.setTitleColor(.white, for: .normal)
     }
     
     private func viewsSetLayout() {
