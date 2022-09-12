@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
     
     var viewsList: [UIView] = []
     let button = UIButton()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,7 +26,7 @@ final class MainViewController: UIViewController {
         setupViews()
         setupButton()
     }
-
+    
     private func setupViews() {
         for _ in 0...6 {
             let view = UIView()
@@ -56,12 +56,12 @@ final class MainViewController: UIViewController {
     @objc
     private func didButtonClicked() {
         print("Click me harder")
-        for view in viewsList {
-            view.backgroundColor = UIColor(hex: randomHexColorString())
-        }
-        for view in viewsList {
-            view.layer.cornerRadius = .random(in: 0...50)
-        }
+        UIView.animate(withDuration: 2, animations: {
+            for view in self.viewsList {
+                view.backgroundColor = UIColor(hex: randomHexColorString())
+                view.layer.cornerRadius = .random(in: 0...50)
+            }
+        })
     }
     
     private func viewsSetLayout() {
