@@ -11,7 +11,6 @@
 		94AB278728CE0D54004709DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AB278628CE0D54004709DC /* SceneDelegate.swift */; };
 		94AB278928CE0D54004709DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AB278828CE0D54004709DC /* MainViewController.swift */; };
 		94AB278E28CE0D57004709DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AB278D28CE0D57004709DC /* Assets.xcassets */; };
-		94AB279A28CE109E004709DC /* MainViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AB279928CE109E004709DC /* MainViewConfig.swift */; };
 		94AB279C28CE114D004709DC /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AB279B28CE114D004709DC /* UIColor+HEX.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +21,6 @@
 		94AB278828CE0D54004709DC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		94AB278D28CE0D57004709DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94AB279228CE0D57004709DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94AB279928CE109E004709DC /* MainViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewConfig.swift; sourceTree = "<group>"; };
 		94AB279B28CE114D004709DC /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,23 +54,14 @@
 		94AB278328CE0D54004709DC /* mdleypunskiyPW1-2022 */ = {
 			isa = PBXGroup;
 			children = (
-				94AB279828CE1083004709DC /* MainScreen */,
 				94AB278428CE0D54004709DC /* AppDelegate.swift */,
+				94AB278828CE0D54004709DC /* MainViewController.swift */,
 				94AB278628CE0D54004709DC /* SceneDelegate.swift */,
 				94AB278D28CE0D57004709DC /* Assets.xcassets */,
 				94AB279228CE0D57004709DC /* Info.plist */,
 				94AB279B28CE114D004709DC /* UIColor+HEX.swift */,
 			);
 			path = "mdleypunskiyPW1-2022";
-			sourceTree = "<group>";
-		};
-		94AB279828CE1083004709DC /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				94AB278828CE0D54004709DC /* MainViewController.swift */,
-				94AB279928CE109E004709DC /* MainViewConfig.swift */,
-			);
-			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +135,6 @@
 			files = (
 				94AB278928CE0D54004709DC /* MainViewController.swift in Sources */,
 				94AB279C28CE114D004709DC /* UIColor+HEX.swift in Sources */,
-				94AB279A28CE109E004709DC /* MainViewConfig.swift in Sources */,
 				94AB278528CE0D54004709DC /* AppDelegate.swift in Sources */,
 				94AB278728CE0D54004709DC /* SceneDelegate.swift in Sources */,
 			);

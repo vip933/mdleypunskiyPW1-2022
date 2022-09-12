@@ -20,17 +20,16 @@ extension UIColor{
         else { return nil }
         
         // Separating hex-code to the parts of red, gree, blue and alpha.
-        let red = CGFloat((rgb & 0xFF000000) >> 24) / 255.0
-        let green = CGFloat((rgb & 0x00FF0000) >> 16) / 255.0
-        let blue = CGFloat((rgb & 0x0000FF00) >> 8) / 255.0
-        let alpha = CGFloat(rgb & 0x000000FF) / 255.0
+        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgb & 0x0000FF) / 255.0
         
         // Transfering separated colors to standart UIColor initializator.
         self.init(
             red: red,
             green: green,
             blue: blue,
-            alpha: alpha)
+            alpha: 1)
     }
 }
 
@@ -42,7 +41,5 @@ func randomHexColorString() -> String {
         // Color for green.
         String(Int.random(in: 0...255), radix: 16) +
         // Color for blue.
-        String(Int.random(in: 0...255), radix: 16) +
-        // Alpha, which is supposed to always be maximum.
-        "FF"
+        String(Int.random(in: 0...255), radix: 16)
 }
