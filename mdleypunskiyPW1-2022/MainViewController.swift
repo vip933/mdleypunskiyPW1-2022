@@ -56,7 +56,9 @@ final class MainViewController: UIViewController {
     @objc
     private func didButtonClicked() {
         print("Click me harder")
-        viewsList[0].backgroundColor = UIColor(hex: randomHexColorString())
+        for view in viewsList {
+            view.backgroundColor = UIColor(hex: randomHexColorString())
+        }
     }
     
     private func viewsSetLayout() {
