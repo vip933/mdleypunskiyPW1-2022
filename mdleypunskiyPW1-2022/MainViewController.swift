@@ -59,6 +59,9 @@ final class MainViewController: UIViewController {
         for view in viewsList {
             view.backgroundColor = UIColor(hex: randomHexColorString())
         }
+        for view in viewsList {
+            view.layer.cornerRadius = .random(in: 0...50)
+        }
     }
     
     private func viewsSetLayout() {
