@@ -58,9 +58,13 @@ final class MainViewController: UIViewController {
         print("Click me harder")
         button.isEnabled = false
         button.setTitleColor(.lightGray, for: .normal)
+        var set = Set<UIColor>()
+                while set.count < viewsList.count {
+                    set.insert(UIColor.init(hex: randomHexColorString())!)
+                }
         UIView.animate(withDuration: 2, animations: {
             for view in self.viewsList {
-                view.backgroundColor = UIColor(hex: randomHexColorString())
+                view.backgroundColor = set.popFirst()
                 view.layer.cornerRadius = .random(in: 0...50)
             }
         }, completion: { _ in self.clickEnded()})
